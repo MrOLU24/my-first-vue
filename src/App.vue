@@ -1,13 +1,22 @@
 <template>
   <div id="app">
-    <h1>Hello, World!</h1>
-    <p>Welcome to Vue.js with Vite 🚀</p>
+    <h1>{{ message }}</h1>
+    <button @click="count++">Count is: {{ count }}</button>
   </div>
 </template>
 
 <script>
+import { ref } from "vue";
+
 export default {
-  name: 'App',
+  setup() {
+    const message = "hello this is my first Vue"
+    const count = ref(0); 
+    return {
+      message,
+      count
+     }; 
+  },
 };
 </script>
 
