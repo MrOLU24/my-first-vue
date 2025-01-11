@@ -1,23 +1,20 @@
 <template>
   <div id="app">
     <h1>{{ message }}</h1>
-    <button @click="count++">Count is: {{ count }}</button>
+    <button @click="increment">Count is: {{ count }}</button>
   </div>
 </template>
 
-<script>
+<script setup>
 import { ref } from "vue";
 
-export default {
-  setup() {
-    const message = "hello this is my first Vue"
-    const count = ref(0); 
-    return {
-      message,
-      count
-     }; 
-  },
-};
+const message = ref("hello world vue 3");
+const count = ref(0);
+
+function increment() {
+  count.value++;
+  message.value = `Clicked ${count.value} Times!`
+}
 </script>
 
 <style>
