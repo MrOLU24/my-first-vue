@@ -2,6 +2,7 @@
   <div id="app">
     <div>
       <h1>{{ message }}</h1>
+      <HelloWorld />
       <button @click="increment">Count is: {{ count }}</button>
     </div>
     <div class="contain">
@@ -12,7 +13,8 @@
       </span>
       <div class="btn-div">
         <button @click="inc">+1</button>
-      <button @click="counter -= 1">-1</button>
+        <button @click="counter -= 1">-1</button>
+        
       </div>
     </div>
   </div>
@@ -20,6 +22,7 @@
 
 <script setup>
 import { computed, ref } from "vue";
+import HelloWorld from "./components/HelloWorld.vue";
 
 const message = ref("hello world vue 3");
 const count = ref(0);
