@@ -42,5 +42,7 @@ function increment() {
 <style>
 #app {
   font-family: Avenir, Helvetica, Arial, sans-serif;
+  font-weight: 500;
+  font-size: small;
 }
 </style>
