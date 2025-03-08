@@ -1,6 +1,6 @@
 <script setup>
 import { computed,  ref} from "vue";
-const message = ref("hello another world vue 3");
+const message = ref("hello another world vue 3.2");
 
 </script>
 
